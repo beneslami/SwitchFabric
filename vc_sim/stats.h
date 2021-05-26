@@ -1,0 +1,12 @@
+extern STATS *cur_stats ;
+extern STATS *new_stats() ;
+extern void init_stats() ;
+extern void log_message_receipt(MESSAGE *message) ;
+extern void log_message_injection(MESSAGE *message) ;
+extern void log_message_creation(MESSAGE *message) ;
+extern void log_lane_histogram(int stage) ;
+extern void print_lane_hist() ;
+extern double flits_per_source_cycle(STATS *stats) ;
+extern double avg_net_latency(STATS *stats) ;
+extern double avg_total_latency(STATS *stats) ;
+extern void print_stats(STATS *stats) ;
