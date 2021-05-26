@@ -1,0 +1,15 @@
+extern void do_update() ; 
+extern void do_reset() ;
+extern void do_run(int i) ;
+extern void do_clear_sources() ;
+extern void do_drain_messages() ;
+extern void do_experiment() ;
+extern void print_channel_states(int i) ;
+extern void print_source_dest(int n) ;
+extern void print_one_message(int src_nr, int generated_time) ;
+extern void setting_VCs() ;
+extern void print_VCs() ;
+extern void init_sources() ;
+extern int  fact(int n) ;
+extern double fabs(double n) ;
+extern CHANNEL *find_channel_for_scratched_message() ;

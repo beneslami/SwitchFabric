@@ -1,0 +1,8 @@
+The virtual simulator created by Bill Dally was extended by Hiro Aoki to 
+include k-ary n-cubes and some adaptive routing functions.
+
+The code is being distributed for use in EE482B.  This code does not
+currently compile.  We are providing it so that you may possibly take
+the k-ary n-cube module for use in your extension of the original
+simulator.
+
