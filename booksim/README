@@ -1,0 +1,25 @@
+To use the simulator, first MAKE it.  It works with the leland
+(/usr/pubsw/bin) tools, but should also be easily compiled with any
+GCC 2.X installation (GCC 3.X is another story).  I've also compiled
+the code under Visual Studio.
+
+To run the simulator, simply type
+
+  booksim <config>
+
+where <config> is a configuration file.  Two example files are
+included: 
+
+  islip8_config -- a single node simulation designed to stress the
+    switch allocator.
+
+  mesh88_age_config -- an 8x8 mesh with age-based arbitration.
+
+Comments on the simulation parameters are included in each of these
+configuration files.  All possible paramters are contained in
+booksim_config.cpp.
+
+The basic router currently supported by the simulator is an
+input-queued, virtual-channel router.  Both k-ary n-cube and k-ary
+n-fly topologies along with several routing algorithms and traffic
+patterns are also supported.

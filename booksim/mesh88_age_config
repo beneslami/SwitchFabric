@@ -1,0 +1,47 @@
+topology = mesh;
+
+k = 8;
+n = 2;
+
+routing_function = dim_order;
+
+// Allocators
+
+vc_allocator = select;   // priority (age) based
+sw_allocator = select;   // priority (age) based
+alloc_iters  = 1;        // number of allocator iterations
+
+// Input-queued router parameters
+
+num_vcs     = 8;        // 8 virtual channels 
+vc_buf_size = 8;        // each with 8 flits of buffering
+ 
+input_speedup  = 2;     // speedup inputs in space
+output_speedup = 1;
+
+internal_speedup = 1.0;
+
+credit_delay     = 2;    // credit processing delay
+routing_delay    = 1;    // routing delay
+vc_alloc_delay   = 1;    // VC allocation delay
+st_final_delay   = 0;
+
+wait_for_tail_credit   = 1;  // reallocate VC's after tail leaves
+hold_switch_for_packet = 0;  // flit-by-flit allocation
+
+// Traffic
+
+const_flits_per_packet = 20;
+priority               = age;  // age-based packet priority
+
+traffic                = uniform;
+
+injection_rate         = 0.3;  // inject 0.3 flits/cycle/source
+
+// Simulation
+
+sample_period  = 1000;  // cycles per sample
+max_samples    = 10;    // samples in a simulation
+warmup_periods = 5;     // warmup samples
+
+seed           = 1;     // random seed

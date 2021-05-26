@@ -1,0 +1,34 @@
+topology = single;  // one node simulation
+
+in_ports  = 8;      // 8 x 8 node
+out_ports = 8;
+
+routing_function = single;
+
+// Allocators
+
+vc_allocator = islip;
+sw_allocator = islip;
+alloc_iters  = 1;
+
+// Input-queued router parameters
+
+num_vcs     = 8;
+vc_buf_size = 1000;  // make buffers big for ideal simulation
+voq         = 1;     // virtual output queuing ( 1 VC per destination )
+
+wait_for_tail_credit = 0; // immediate reuse VC's
+
+// Traffic
+
+injection_rate = 0.3; // inject 0.3 flits/cycle/source
+
+// Simulation
+
+sample_period  = 1000;  // cycles per sample
+max_samples    = 10;    // samples in a simulation
+warmup_periods = 5;     // warmup samples
+
+seed           = 1;     // random seed
+
+
